@@ -1,1 +1,33 @@
+def chatbot():
+    print("Hello! I'm ChatBuddy 🤖. How can I help you today?")
+
+    while True:
+        # Get user input
+        user_input = input("You: ").lower()
+
+        # Exit condition
+        if user_input in ["bye", "exit", "quit"]:
+            print("ChatBuddy: It was nice talking to you. Goodbye! 👋")
+            break
+
+        # Respond based on simple rules
+        if "hello" in user_input or "hi" in user_input:
+            print("ChatBuddy: Hello there! Nice to meet you?")
+        elif "how are you" in user_input:
+            print("ChatBuddy: I'm just a bunch of code, but I'm doing great! Thanks for asking 😊")
+        elif "your name" in user_input:
+            print("ChatBuddy: I'm ChatBuddy, your simple chatbot friend.")
+        elif "help" in user_input:
+            print("ChatBuddy: Sure! You can ask me about the weather, time, or just chat with me.")
+        elif "time" in user_input:
+            from datetime import datetime
+            now = datetime.now()
+            print(f"ChatBuddy: The current time is {now.strftime('%H:%M:%S')}")
+        elif "weather" in user_input:
+            print("ChatBuddy: I can't check real weather yet, but I hope it's sunny wherever you are!")
+        else:
+            print("ChatBuddy: Sorry, I didn't quite get that. Could you rephrase?")
+
+#Run the chatbot
+chatbot()
 
